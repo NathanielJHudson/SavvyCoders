@@ -4,7 +4,7 @@
 
 I am a normal guy trying to learn Javascript.
 
-*[Facebook](https://www.facebook.com/natejh0721)
-*[My Favorite Artist](https://gagadaily.com/)
-*[Git Hub](https://github.com/ibn0721)
+* [Facebook](https://www.facebook.com/natejh0721)
+* [My Favorite Artist](https://gagadaily.com/)
+* [Git Hub](https://github.com/ibn0721)
 
