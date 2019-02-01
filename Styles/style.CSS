@@ -1,7 +1,17 @@
-
+*{
+    border :solid 1px red;
+    margin: 20px;
+    padding: 30px;
+}
 h1 {
-    background-color: aqua;
+    /*margin-left: 120px;*/ 
+    /* margin top right bottom left*/
+    margin: 10px 20px 30px 40px;
+    background-color: rgb(255, 0, 0);
     color: tomato;
+    padding: 20px 30px 10px;
+    height: 100px;
+    width: 100px;
 }
 
 h2 {
@@ -27,4 +37,14 @@ h3 {
 }
 #content{
     background-color: cornsilk
-}
+
+
+    }
+    .container{
+        width: 900px;   
+        margin: 0 auto;
+    }
+    .centeredlr{
+        margin: 0 auto;
+    }
+}                                                                                          
