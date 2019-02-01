@@ -1,0 +1,30 @@
+
+h1 {
+    background-color: aqua;
+    color: tomato;
+}
+
+h2 {
+    background-color: coral;
+    color: deeppink;
+}
+
+h3 {
+    background-color: lightpink;
+    color: violet;
+}
+.tomatify{
+    color:brown
+}
+.Backcolor{
+    background-color: crimson
+}
+.lastone{
+    background-color:darkolivegreen
+}
+.fun{
+    border-left-color: blueviolet
+}
+#content{
+    background-color: cornsilk
+}
