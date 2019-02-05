@@ -1,57 +1,83 @@
-*{
-    border :solid 1px red;
-    margin: 2px;
-    padding: 3px;
-}
-h1 {
-    /*margin-left: 120px;*/ 
-    /* margin top right bottom left*/
-    margin: 10px 20px 30px 40px;
-    background-color: rgb(255, 0, 0);
-    color: tomato;
-    */padding: 5px 5px 5px;
-    height: 10px;
-    width: 10px;
-}
-
-h2 {
-    background-color: coral;
-    color: deeppink;
-}
-#navigation li{
-    display: inline; color: blueviolet
-    }
-
-h3 {
-    background-color: lightpink;
-    color: violet;
-}
-.tomatify{
-    color:brown
-}
-.Backcolor{
-    background-color: crimson
-}
-.lastone{
-    background-color:darkolivegreen
-}
-.fun{
-    border-left-color: blueviolet
-}
-#content{
-    background-color: cornsilk
-
-
-    }
-
-    .container{
-        width: 90px;   
-        margin: 0 auto;
-    }
-    .centeredlr{
-        margin: 0 auto;
-    }
-    #lastone2{
-        background-color: hotpink;
-    }
-}                                                                                          
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: blueviolet;
+    font-size: 20px;
+  }
+  
+  h3:first-of-type {
+    margin-top: 10px;
+  }
+  
+  hr {
+    margin: 20px 0;
+  }
+  
+  figure {
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  ul li {
+    text-indent: 10px;
+  }
+  
+  p:not(:first-of-type) {
+    margin: 10px 5px;
+  }
+  
+  #navigation {
+    background: white;
+    padding: 16px;
+    text-transform: uppercase;
+  }
+  
+  #navigation a {
+    display: inline-block;
+    /* We need block or inline-block to have some properties like 'min-width' to have any effect. */
+    min-width: 48px;
+  }
+  
+  #navigation li {
+    display: inline;
+    margin-right: 25px;
+    text-decoration: none;
+  }
+  
+  #header {
+    color: chartreuse;
+    padding: 10px 0;
+  }
+  
+  #content {
+    background: whitesmoke;
+    /* padding: 10px 0; */
+  }
+  
+  .flt-lft {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .container {
+    margin: auto;
+    width: 960px;
+  }
+  
+  .container > div {
+    padding-top: 10px;
+  }
+  
+  li:hover {
+    background: red;
+  }
