@@ -1,82 +1,102 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  body {
-    background-color: blueviolet;
-    font-size: 30px;
-  }
-  
-  h3:first-of-type {
-    margin-top: 10px;
-  }
-  
-  hr {
-    margin: 20px 0;
-  }
-  
-  figure {
-    text-align: center;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  ul li {
-    text-indent: 10px;
-  }
-  
-  p:not(:first-of-type) {
-    margin: 10px 5px;
-  }
-  
-  #navigation {
-    background: white;
-    padding: 60px;
-    text-transform: uppercase;
-  }
-  
-  #navigation a {
-    display: inline-block;
-    min-width: 60px;
-  }
-  
-  #navigation li {
-    display: inline;
-    margin-right: 25px;
-    text-decoration: none;
-  }
-  
-  #header {
-    color:magenta;
-    padding: 10px 0;
-  }
-  
-  #content {
-    background: orange;
-    padding: 10px 0;
-  }
-  
-  .flt-lft {
-    float: left;
-    margin-right: 20px;
-  }
-  
-  .container {
-    margin: auto;
-    width: 960px;
-  }
-  
-  .container > div {
-    padding-top: 10px;
-  }
-  
-  li:hover {
-    background: red;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: blueviolet;
+  font-size: 30px;
+}
+
+h3:first-of-type {
+  margin-top: 10px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+figure {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  text-indent: 10px;
+}
+
+p:not(:first-of-type) {
+  margin: 10px 5px;
+}
+
+#navigation {
+  background: white;
+  padding: 60px;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#navigation a {
+  display: inline-block;
+  min-width: 60px;
+}
+
+#navigation>ul>li {
+  display: inline;
+  margin-right: 25px;
+  text-decoration: none;
+}
+
+#header {
+  color: magenta;
+  padding-top: 213px;
+}
+
+#content {
+  background: orange;
+  padding: 10px 0;
+}
+
+#navigation>ul>li:hover>ul {
+  display: block;
+}
+
+#navigation>ul>li {
+  position: relative;
+}
+
+#navigation>ul>li>ul {
+  position: absolute;
+  background-color: blue;
+  top: 30px;
+  left: 0px;
+  display: none;
+}
+
+.flt-lft {
+  float: left;
+  margin-right: 20px;
+}
+
+.container {
+  margin: auto;
+  width: 960px;
+}
+
+.container>div {
+  padding-top: 10px;
+}
+
+li:hover {
+  background: red;
+}
