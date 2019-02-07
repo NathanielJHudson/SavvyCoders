@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 a {
@@ -10,7 +11,12 @@ a {
 body {
   background-color: blueviolet;
   font-size: 30px;
-  text-decoration: overline;
+  text-decoration: underline;
+}
+img{
+  border-radius: 150px;
+  border: dotted
+
 }
 
 h3:first-of-type {
