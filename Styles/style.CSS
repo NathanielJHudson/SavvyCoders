@@ -12,16 +12,15 @@ body {
   background-color: blueviolet;
   display: grid;
   font-size: 30px;
+  grid-template-areas: "navigation" "header" "content" "footer";
   grid-template-rows: min-content min-content auto min-content;
   min-height: 100vh;
-  text-decoration: underline;
-
-
+  text-decoration: none;
 }
-img{
+
+img {
   border-radius: 150px;
   border: dotted
-
 }
 
 h3:first-of-type {
@@ -44,17 +43,21 @@ ul li {
   text-indent: 10px;
 }
 
+ul li ul {
+  display: none;
+}
+
 p:not(:first-of-type) {
   margin: 10px 5px;
 }
 
 #navigation {
   background: white;
-position: sticky;
-top: 0; 
+  position: sticky;
+  top: 0;
   padding: 60px;
+  grid-area: navigation;
   text-transform: uppercase;
-  
   top: 0;
   left: 0;
 }
@@ -72,11 +75,17 @@ top: 0;
 
 #header {
   color: magenta;
+  grid-area: header;
 }
 
 #content {
   background: orange;
   padding: 10px 0;
+  grid-area: content;
+}
+
+#footer {
+  grid-area: footer;
 }
 
 #navigation>ul>li:hover>ul {
@@ -87,12 +96,18 @@ top: 0;
   position: relative;
 }
 
-#navigation>ul>li>ul {
+#navigation>li>ul {
   position: absolute;
   background-color: blue;
   top: 30px;
   left: 0px;
   display: none;
+}
+
+#navigation>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .flt-lft {
@@ -102,7 +117,7 @@ top: 0;
 
 .container {
   margin: auto;
-  width: 960px;
+  max-width: 960px;
 }
 
 .container>div {
@@ -111,4 +126,15 @@ top: 0;
 
 li:hover {
   background: red;
+}
+
+@media(min-width: 800px) {
+  body {
+    grid-template-areas: "navigation header" "navigation content" "navigation   footer";
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: minmax(min-content, 15vw) auto;
+  }
+  #navigation>ul {
+    flex-direction: column;
+  }
 }
