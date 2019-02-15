@@ -42,7 +42,7 @@ ul {
 }
 
 ul li {
-  text-indent: 10px;
+  text-indent: none;
 }
 
 ul li ul {
@@ -57,7 +57,6 @@ p:not(:first-of-type) {
   background: white;
   position: sticky;
   top: 0;
-  padding: 60px;
   grid-area: navigation;
   text-transform: uppercase;
   top: 0;
@@ -66,7 +65,7 @@ p:not(:first-of-type) {
 
 #navigation a {
   display: inline-block;
-  min-width: 60px;
+  min-width: 0px;
 }
 
 #navigation>ul>li {
@@ -78,12 +77,12 @@ p:not(:first-of-type) {
 #header {
   color: magenta;
   grid-area: header;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #content {
   background: orange;
-  padding: 10px 0;
+  
   grid-area: content;
 }
 
