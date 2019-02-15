@@ -91,8 +91,11 @@
 
 <script>
 var name = window.prompt("What is your name?");
+if(name === ""){
+    console.log("blank")
+}
 alert(`Your name is ${name}`);
-document.querySelector("h1").textContent = `Hello, ${name}`;
+document.querySelector("h1").textContent = `Hello, ${name}`  
 
 
 </script>
