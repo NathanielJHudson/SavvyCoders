@@ -1,3 +1,20 @@
+import Navigation  from './src/Navigation';
+import Header from './src/Header';
+import Content from './src/Content';
+import Footer from './src/Footer';
+
+
+var originalContent = document.body.innerHTML;
+
+document.body.innerHTML = `
+ ${Navigation}
+ ${Header}
+ ${Content}
+ ${originalContent}
+ ${Footer}
+ `;
+
+
 // Put 'name' in the global scope so it is reliably accessible by both functions.
 var name;
 
@@ -22,3 +39,5 @@ var nameChecker = function nameChecker(){
 };
 
 nameChecker();
+
+

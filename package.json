@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint": "^5.12.1",
     "parcel-bundler": "^1.11.0"
+  },
+  "dependencies": {
+    "src": "^1.1.2"
   }
 }
