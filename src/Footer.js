@@ -1,3 +1,6 @@
-export default `<div id="footer">
+export default function footer(){
+    return `<div id="footer">
 <p><p/>
 </div>`;
+}
+

@@ -1,9 +1,12 @@
-export default `<div id="header">
+
+export default function Header(title){
+    return `<div id="header">
 <div class="container">
 
 
-    <h1>Welcome to my portfolio,</h1>
-    <h2>When the pimps at the crib?</h2>
-    <ol>
+    <h1>${title}</h1>
+    <h2>When the pimps at the crib ma?</h2>
 </div>
-</div> `;
+</div>
+ `;
+}

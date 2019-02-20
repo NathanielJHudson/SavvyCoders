@@ -1,4 +1,5 @@
-export default `<div id="navigation">
+export default function Navigation(){
+    return `<div id="navigation">
         <ul class="container">
             <li>
                 <a href="#">Home</a>
@@ -20,3 +21,4 @@ export default `<div id="navigation">
         </ul>
     </div>
     `;
+}
