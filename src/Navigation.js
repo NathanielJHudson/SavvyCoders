@@ -2,7 +2,7 @@ export default function Navigation(){
     return `<div id="navigation">
         <ul class="container">
             <li>
-                <a href="#">Home</a>
+                <a href="/">Home</a>
             </li>
             <li>
                 <a href="blog/">Blog</a>

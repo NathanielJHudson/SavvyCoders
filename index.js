@@ -1,43 +1,65 @@
-import Navigation  from './src/Navigation';
+import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Content from './src/Content';
+// import nameChecker from './src/Greet';
 import Footer from './src/Footer';
 
 
-var originalContent = document.body.innerHTML;
-
-document.body.innerHTML = `
- ${Navigation}
- ${Header}
- ${Content}
- ${originalContent}
- ${Footer}
- `;
-
-
-// Put 'name' in the global scope so it is reliably accessible by both functions.
-var name;
-
-// Verify that user entered some name
-var blankChecker = function blankChecker(){ // We should also add an explicit name in our fxn. declaration as that will help us with tracing possible errors.
-    if(name === ''){
-        name = prompt('For real, enter your name!');
-
-        // RECURSION
-        blankChecker();
+var State = {
+    'Home': {
+        'title': 'Welcome to Nathaniel\'s Savvy coder website'
+    },
+    'Blog': {
+        'title': 'Welcome to Nathaniel\'s Savvy coder website'
+    },
+    'Contact': {
+        'title': 'Contact Nathaniel'
+    },
+    'Projects': {
+        'title': 'Look at these cool things!'
     }
 };
+    
+var root = document.querySelector('#root');
 
-// 'Main' fxn. to start the program
-var nameChecker = function nameChecker(){
-    name = prompt('Please enter your name!');
 
-    // Check for a blank name!
-    blankChecker();
+function render(state){
+    var links;
 
-    document.querySelector('h1').textContent = `Hello, ${name}`;
-};
+    root.innerHTML = `
+    ${Navigation(state)}
+    ${Header(state.title)}
+    ${Content(state)}
+    ${Footer(state)}
+    `;
+    links = document.querySelectorAll('#navigation>ul>li>a');
 
-nameChecker();
+    links[0].addEventListener(
+        'click',
+        (event) => {
+            event.preventDefault();
+            render(State[event.target.textContent]);
+        }
+    );
 
+    links[1].addEventListener('click',
+        (event) => {
+            event.preventDefault();
+            render(State[event.target.textContent]);
+        }
+    );
+    links[2].addEventListener('click',
+        (event) => {
+            event.preventDefault();
+            render(State[event.target.textContent]);
+        }
+    );
+    links[3].addEventListener('click',
+        (event) => {
+            event.preventDefault();
+            render(State[event.target.textContent]);
+        }
+    );
+}
+render(State.Home);
 

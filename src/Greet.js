@@ -1,4 +1,4 @@
-export default function nameChecker(){
+/*export default function nameChecker(){
     var name = prompt('Please enter your name!');
 
     if(name === ''){
