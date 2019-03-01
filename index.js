@@ -25,6 +25,7 @@ var root = document.querySelector('#root');
 
 function render(state){
     var links;
+    var iterator = 0;
 
     root.innerHTML = `
     ${Navigation(state)}
@@ -34,32 +35,15 @@ function render(state){
     `;
     links = document.querySelectorAll('#navigation>ul>li>a');
 
-    links[0].addEventListener(
-        'click',
-        (event) => {
-            event.preventDefault();
-            render(State[event.target.textContent]);
-        }
-    );
-
-    links[1].addEventListener('click',
-        (event) => {
-            event.preventDefault();
-            render(State[event.target.textContent]);
-        }
-    );
-    links[2].addEventListener('click',
-        (event) => {
-            event.preventDefault();
-            render(State[event.target.textContent]);
-        }
-    );
-    links[3].addEventListener('click',
-        (event) => {
-            event.preventDefault();
-            render(State[event.target.textContent]);
-        }
-    );
+    while(iterator < links.length){
+        links[iterator].addEventListener(
+            'click',
+            (event) => {
+                event.preventDefault();
+                render(State[event.target.textContent]);
+            }
+        );
+        iterator++;
+    }
 }
 render(State.Home);
-
