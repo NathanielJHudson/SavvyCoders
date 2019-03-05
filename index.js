@@ -3,51 +3,32 @@ import Header from './src/Header';
 import Content from './src/Content';
 // import nameChecker from './src/Greet';
 import Footer from './src/Footer';
+import * as State from './state';
+import { startCase } from 'lodash';
+import Navigo from 'navigo';
 
+var router = new Navigo(location.origin);
 
-var State = {
-    'Home': {
-        'links': [ 'Blog','Contact','Projects' ],
-        'title': 'Welcome to Nathaniel\'s Savvy coder website'
-    },
-    'Blog': {
-        'links': [ 'Home','Contact','Projects' ],
-        'title': 'Welcome to Nathaniel\'s Savvy coder website'
-    },
-    'Contact': {
-        'links': [ 'Home','Blog','Projects' ] ,
-        'title': 'Contact Nathaniel'
-    },
-    'Projects': {
-        'links': [ 'Blog','Contact','Contact' ],
-        'title': 'Look at these cool things!'
-    }
-};
-    
 var root = document.querySelector('#root');
 
-
+    
 function render(state){
-    var links;
-    var iterator = 0;
-
     root.innerHTML = `
     ${Navigation(state)}
     ${Header(state.title)}
     ${Content(state)}
     ${Footer(state)}
     `;
-    links = document.querySelectorAll('#navigation>ul>li>a');
-
-    while(iterator < links.length){
-        links[iterator].addEventListener(
-            'click',
-            (event) => {
-                event.preventDefault();
-                render(State[event.target.textContent]);
-            }
-        );
-        iterator++;
-    }
+    router.updatePageLinks();
 }
-render(State.Home);
+    
+function handleNavigation(params){
+    var destination = startCase(params.page);
+
+    render(State[destination]); // eslint-disable-line
+}
+
+router
+    .on('/:page', () => handleNavigation('Blog'))
+    .on('/', () => handleNavigation({ 'page': 'Home' }))
+    .resolve();
