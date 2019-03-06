@@ -29,6 +29,6 @@ function handleNavigation(params){
 }
 
 router
-    .on('/:page', () => handleNavigation('Blog'))
+    .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'Home' }))
     .resolve();
