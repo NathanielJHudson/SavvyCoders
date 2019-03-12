@@ -1,22 +1,20 @@
 import { lowerCase } from 'lodash';
 
 function linkBuilder(linksArr){
-    var linksHTML = '';
-    var destination = '';
-    
-    linksArr.forEach((link) => {
+    var linksHTML = linksArr.map((link) => {
+        var destination = '';
+
         if(link !== 'Home'){
             destination = lowerCase(link);
         }
-        linksHTML += `
-        <li>
+        
+        return `<li>
             <a data-navigo href="./${destination}">
                 ${link}
             </a>
         </li>
         `;
-    });
-
+    }).join(' ');
     
     return linksHTML;
 }
