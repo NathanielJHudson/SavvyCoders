@@ -1,5 +1,7 @@
-export default function(){
-    return `<div id="content">
+export default function content(posts){
+    console.log('content says', posts);
+    
+return `<div id="content">
 <div class="container">
     <figure class="flt-lft">
         <img src="https://avatars0.githubusercontent.com/u/33047245?s=460&v=4"

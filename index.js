@@ -13,6 +13,17 @@ var root = document.querySelector('#root');
 
     
 function render(state){
+    if(!state.links.includes('Blog')){
+        state.posts = [];
+
+        axios
+            .get('https://jsonplaceholder.typicode.com/posts')
+            .then((response) => {
+                state.posts = response.data;
+                console.log('inside axios call', state.posts);
+            });
+    }
+    
     root.innerHTML = `
     ${Navigation(state)}
     ${Header(state.title)}
